@@ -1,0 +1,35 @@
+[project]
+name = "erp-demo-workspace"
+version = "0.1.0"
+description = "跨境电商供应链 ERP_DEMO（咪咪兔科技）"
+requires-python = ">=3.12"
+dependencies = [
+  "erp-api",
+  "erp-mcp",
+]
+
+[tool.uv.workspace]
+members = ["apps/api", "apps/mcp-server"]
+
+[tool.uv.sources]
+erp-api = { workspace = true }
+erp-mcp = { workspace = true }
+
+[dependency-groups]
+dev = [
+  "pytest>=8",
+  "pytest-cov>=5",
+  "ruff>=0.6",
+  "httpx2>=0.28",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["apps/api/tests", "apps/mcp-server/tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

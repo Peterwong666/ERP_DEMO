@@ -1,0 +1,117 @@
+:root {
+  /* Surfaces */
+  --background: #f1f5f9;
+  --foreground: #314158;
+  --card: #ffffff;
+  --card-foreground: #314158;
+  --popover: #ffffff;
+  --popover-foreground: #314158;
+
+  /* Controls */
+  --primary: #314158;
+  --primary-foreground: #ffffff;
+  --secondary: #f8fafc;
+  --secondary-foreground: #314158;
+  --muted: #f1f5f9;
+  --muted-foreground: #62748e;
+  --accent: #f8fafc;
+  --accent-foreground: #314158;
+  --destructive: #e7000b;
+
+  /* Lines / inputs */
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #155dfc;
+
+  /* Brand */
+  --brand: #155dfc;
+  --brand-foreground: #ffffff;
+
+  /* Sidebar (dark slate, design width 240px) */
+  --sidebar-width: 240px;
+  --sidebar: #0f172a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #155dfc;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(255, 255, 255, 0.08);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #1e293b;
+  --sidebar-ring: #155dfc;
+
+  /* Semantic */
+  --success: #008236;
+  --success-soft: #dcfce7;
+  --warning: #bb4d00;
+  --warning-soft: #fef3c6;
+  --danger: #c10007;
+  --danger-soft: #ffe2e2;
+
+  /* Charts — donut (defect reasons) */
+  --chart-1: #dc2626;
+  --chart-2: #d97706;
+  --chart-3: #7c3aed;
+  --chart-4: #0891b2;
+  --chart-5: #16a34a;
+  --chart-6: #94a3b8;
+
+  /* Radius (design: 4 / 8 / 12) */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+@theme inline {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --font-inter: var(--font-sans);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: 16px;
+}
