@@ -4,8 +4,6 @@ from datetime import datetime
 from decimal import Decimal
 
 import pytest
-from sqlalchemy.orm import Session
-
 from app.models import DailySales, Inventory, Product, Supplier
 from app.models.enums import (
     ProductCategory,
@@ -23,6 +21,7 @@ from app.services.inventory_service import (
 )
 from app.services.settings_service import update_values
 from app.services.stock_analytics import find_low_stock
+from sqlalchemy.orm import Session
 
 ANCHOR = datetime(2026, 10, 9)
 

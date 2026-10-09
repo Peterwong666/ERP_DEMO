@@ -19,7 +19,7 @@ from app.models.enums import (
     ReceivingStatus,
     SupplierStatus,
 )
-from app.schemas.products import POLineIn, POCreate, ProductCreate
+from app.schemas.products import POCreate, POLineIn, ProductCreate
 from app.services import inventory_ledger
 from app.services.inspection_service import (
     InspectionError,

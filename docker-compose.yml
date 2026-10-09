@@ -9,6 +9,10 @@ services:
       # JSON list; env var replaces cors_origins, so include all dev origins
       ERP_CORS_ORIGINS: >-
         ["http://localhost:5173","http://127.0.0.1:5173","http://localhost:8080","http://127.0.0.1:8080"]
+      # 数据库放在独立挂载卷，容器重建后数据保留
+      ERP_DATABASE_URL: sqlite:////data/erp_demo.db
+    volumes:
+      - erp-data:/data
 
   web:
     build:
@@ -20,3 +24,6 @@ services:
       - "8080:80"
     depends_on:
       - api
+
+volumes:
+  erp-data:

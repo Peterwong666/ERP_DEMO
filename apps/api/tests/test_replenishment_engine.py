@@ -8,8 +8,6 @@ from collections import Counter
 from datetime import date
 from decimal import Decimal
 
-from sqlalchemy.orm import Session
-
 from app.models import (
     DailySales,
     Product,
@@ -35,6 +33,7 @@ from app.services.replenishment_service import (
 )
 from app.services.settings_service import update_values
 from app.services.stock_analytics import find_low_stock
+from sqlalchemy.orm import Session
 
 ANCHOR_D = date(2026, 10, 9)
 
