@@ -20,3 +20,9 @@ dist/
 .DS_Store
 .idea/
 .vscode/
+
+# Local backup (not for git)
+todolist_backup.md
+
+# Playwright MCP test artifacts
+**/.playwright-mcp/

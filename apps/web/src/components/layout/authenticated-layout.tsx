@@ -5,6 +5,7 @@ import { LayoutProvider } from '@/context/layout-provider'
 import { SearchProvider } from '@/context/search-provider'
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
 import { AppSidebar } from '@/components/layout/app-sidebar'
+import { Main } from '@/components/layout/main'
 import { SkipToMain } from '@/components/skip-to-main'
 
 type AuthenticatedLayoutProps = {
@@ -33,7 +34,9 @@ export function AuthenticatedLayout({ children }: AuthenticatedLayoutProps) {
               'peer-data-[variant=inset]:has-data-[layout=fixed]:h-[calc(100svh-(var(--spacing)*4))]'
             )}
           >
-            {children ?? <Outlet />}
+            <Main fluid id='content' className='px-4 md:px-6'>
+              {children ?? <Outlet />}
+            </Main>
           </SidebarInset>
         </SidebarProvider>
       </LayoutProvider>

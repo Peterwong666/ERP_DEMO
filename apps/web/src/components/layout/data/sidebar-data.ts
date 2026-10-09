@@ -6,14 +6,15 @@ import {
   PackageCheck,
   ShoppingCart,
   Sparkles,
+  TrendingUp,
 } from 'lucide-react'
 import { type SidebarData } from '../types'
 
 export const sidebarData: SidebarData = {
   user: {
     name: '供应链运营',
-    email: 'ops@mimitutech.com',
-    avatar: '/avatars/mimitu.png',
+    email: 'peterwong@example.com',
+    avatar: '/avatars/peter.svg',
   },
   teams: [],
   navGroups: [
@@ -26,6 +27,7 @@ export const sidebarData: SidebarData = {
         { title: '收货管理', url: '/receiving', icon: PackageCheck },
         { title: '质检管理', url: '/inspection', icon: ClipboardCheck },
         { title: '库存管理', url: '/inventory', icon: Boxes },
+        { title: '补货管理', url: '/replenishment', icon: TrendingUp },
         { title: 'AI 供应链', url: '/ai-supply', icon: Sparkles },
       ],
     },

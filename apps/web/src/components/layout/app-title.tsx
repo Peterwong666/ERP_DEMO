@@ -25,7 +25,7 @@ export function AppTitle() {
               onClick={() => setOpenMobile(false)}
               className='grid flex-1 text-start text-sm leading-tight'
             >
-              <span className='truncate font-bold'>咪咪兔科技</span>
+              <span className='truncate font-bold'>PeterWong演示项目</span>
               <span className='truncate text-xs'>供应链 ERP</span>
             </Link>
             <ToggleSidebar />

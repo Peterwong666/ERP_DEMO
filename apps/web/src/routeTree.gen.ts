@@ -17,6 +17,7 @@ import { Route as errors404RouteImport } from './routes/(errors)/404'
 import { Route as errors403RouteImport } from './routes/(errors)/403'
 import { Route as errors401RouteImport } from './routes/(errors)/401'
 import { Route as AuthenticatedSettingsIndexRouteImport } from './routes/_authenticated/settings/index'
+import { Route as AuthenticatedReplenishmentIndexRouteImport } from './routes/_authenticated/replenishment/index'
 import { Route as AuthenticatedReceivingIndexRouteImport } from './routes/_authenticated/receiving/index'
 import { Route as AuthenticatedPurchaseOrdersIndexRouteImport } from './routes/_authenticated/purchase-orders/index'
 import { Route as AuthenticatedProductsIndexRouteImport } from './routes/_authenticated/products/index'
@@ -63,6 +64,12 @@ const AuthenticatedSettingsIndexRoute =
   AuthenticatedSettingsIndexRouteImport.update({
     id: '/settings/',
     path: '/settings/',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedReplenishmentIndexRoute =
+  AuthenticatedReplenishmentIndexRouteImport.update({
+    id: '/replenishment/',
+    path: '/replenishment/',
     getParentRoute: () => AuthenticatedRouteRoute,
   } as any)
 const AuthenticatedReceivingIndexRoute =
@@ -122,6 +129,7 @@ export interface FileRoutesByFullPath {
   '/products/': typeof AuthenticatedProductsIndexRoute
   '/purchase-orders/': typeof AuthenticatedPurchaseOrdersIndexRoute
   '/receiving/': typeof AuthenticatedReceivingIndexRoute
+  '/replenishment/': typeof AuthenticatedReplenishmentIndexRoute
   '/settings/': typeof AuthenticatedSettingsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -138,6 +146,7 @@ export interface FileRoutesByTo {
   '/products': typeof AuthenticatedProductsIndexRoute
   '/purchase-orders': typeof AuthenticatedPurchaseOrdersIndexRoute
   '/receiving': typeof AuthenticatedReceivingIndexRoute
+  '/replenishment': typeof AuthenticatedReplenishmentIndexRoute
   '/settings': typeof AuthenticatedSettingsIndexRoute
 }
 export interface FileRoutesById {
@@ -156,6 +165,7 @@ export interface FileRoutesById {
   '/_authenticated/products/': typeof AuthenticatedProductsIndexRoute
   '/_authenticated/purchase-orders/': typeof AuthenticatedPurchaseOrdersIndexRoute
   '/_authenticated/receiving/': typeof AuthenticatedReceivingIndexRoute
+  '/_authenticated/replenishment/': typeof AuthenticatedReplenishmentIndexRoute
   '/_authenticated/settings/': typeof AuthenticatedSettingsIndexRoute
 }
 export interface FileRouteTypes {
@@ -174,6 +184,7 @@ export interface FileRouteTypes {
     | '/products/'
     | '/purchase-orders/'
     | '/receiving/'
+    | '/replenishment/'
     | '/settings/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -190,6 +201,7 @@ export interface FileRouteTypes {
     | '/products'
     | '/purchase-orders'
     | '/receiving'
+    | '/replenishment'
     | '/settings'
   id:
     | '__root__'
@@ -207,6 +219,7 @@ export interface FileRouteTypes {
     | '/_authenticated/products/'
     | '/_authenticated/purchase-orders/'
     | '/_authenticated/receiving/'
+    | '/_authenticated/replenishment/'
     | '/_authenticated/settings/'
   fileRoutesById: FileRoutesById
 }
@@ -277,6 +290,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedSettingsIndexRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/replenishment/': {
+      id: '/_authenticated/replenishment/'
+      path: '/replenishment'
+      fullPath: '/replenishment/'
+      preLoaderRoute: typeof AuthenticatedReplenishmentIndexRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/receiving/': {
       id: '/_authenticated/receiving/'
       path: '/receiving'
@@ -338,6 +358,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedProductsIndexRoute: typeof AuthenticatedProductsIndexRoute
   AuthenticatedPurchaseOrdersIndexRoute: typeof AuthenticatedPurchaseOrdersIndexRoute
   AuthenticatedReceivingIndexRoute: typeof AuthenticatedReceivingIndexRoute
+  AuthenticatedReplenishmentIndexRoute: typeof AuthenticatedReplenishmentIndexRoute
   AuthenticatedSettingsIndexRoute: typeof AuthenticatedSettingsIndexRoute
 }
 
@@ -350,6 +371,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedProductsIndexRoute: AuthenticatedProductsIndexRoute,
   AuthenticatedPurchaseOrdersIndexRoute: AuthenticatedPurchaseOrdersIndexRoute,
   AuthenticatedReceivingIndexRoute: AuthenticatedReceivingIndexRoute,
+  AuthenticatedReplenishmentIndexRoute: AuthenticatedReplenishmentIndexRoute,
   AuthenticatedSettingsIndexRoute: AuthenticatedSettingsIndexRoute,
 }
 

@@ -1,7 +1,7 @@
 [project]
 name = "erp-demo-workspace"
 version = "0.1.0"
-description = "跨境电商供应链 ERP_DEMO（咪咪兔科技）"
+description = "跨境电商供应链 ERP_DEMO（PeterWong演示项目）"
 requires-python = ">=3.12"
 dependencies = [
   "erp-api",
@@ -30,6 +30,12 @@ addopts = "-q"
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+# Alembic 自动生成的迁移脚本，不做 lint
+extend-exclude = ["apps/api/migrations/versions"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# FastAPI 标准写法：Depends() 出现在参数默认值中
+"apps/**/routers/*.py" = ["B008"]

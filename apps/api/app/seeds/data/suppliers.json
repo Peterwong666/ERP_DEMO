@@ -1,0 +1,102 @@
+[
+  {
+    "code": "SUP-001",
+    "name": "深圳华芯电子有限公司",
+    "contact_person": "陈工",
+    "email": "chen@huaxin-elec.example",
+    "phone": "0755-88001001",
+    "country": "中国",
+    "lead_time_days": 15,
+    "status": "active"
+  },
+  {
+    "code": "SUP-002",
+    "name": "东莞迅捷五金塑胶厂",
+    "contact_person": "刘经理",
+    "email": "liu@xunjie-hardware.example",
+    "phone": "0769-22002002",
+    "country": "中国",
+    "lead_time_days": 12,
+    "status": "active"
+  },
+  {
+    "code": "SUP-003",
+    "name": "广州雅柔皮具制品厂",
+    "contact_person": "周女士",
+    "email": "zhou@yarou-leather.example",
+    "phone": "020-33003003",
+    "country": "中国",
+    "lead_time_days": 20,
+    "status": "active"
+  },
+  {
+    "code": "SUP-004",
+    "name": "义乌鑫鑫家居用品有限公司",
+    "contact_person": "吴总",
+    "email": "wu@xinxin-home.example",
+    "phone": "0579-44004004",
+    "country": "中国",
+    "lead_time_days": 10,
+    "status": "active"
+  },
+  {
+    "code": "SUP-005",
+    "name": "宁波海润纺织有限公司",
+    "contact_person": "郑经理",
+    "email": "zheng@hairun-textile.example",
+    "phone": "0574-55005005",
+    "country": "中国",
+    "lead_time_days": 18,
+    "status": "active"
+  },
+  {
+    "code": "SUP-006",
+    "name": "上海美黛生物科技有限公司",
+    "contact_person": "林女士",
+    "email": "lin@meidai-cos.example",
+    "phone": "021-66006006",
+    "country": "中国",
+    "lead_time_days": 25,
+    "status": "active"
+  },
+  {
+    "code": "SUP-007",
+    "name": "汕头澄海乐童玩具厂",
+    "contact_person": "黄厂长",
+    "email": "huang@letong-toys.example",
+    "phone": "0754-77007007",
+    "country": "中国",
+    "lead_time_days": 14,
+    "status": "active"
+  },
+  {
+    "code": "SUP-008",
+    "name": "福建晋江恒步鞋服有限公司",
+    "contact_person": "许经理",
+    "email": "xu@hengbu-apparel.example",
+    "phone": "0595-88008008",
+    "country": "中国",
+    "lead_time_days": 16,
+    "status": "active"
+  },
+  {
+    "code": "SUP-009",
+    "name": "苏州精工电子科技有限公司",
+    "contact_person": "高工",
+    "email": "gao@jinggong-elec.example",
+    "phone": "0512-99009009",
+    "country": "中国",
+    "lead_time_days": 22,
+    "status": "active"
+  },
+  {
+    "code": "SUP-010",
+    "name": "Minh Duong Manufacturing JSC",
+    "contact_person": "Mr. Pham",
+    "email": "pham@minhduong-mfg.example",
+    "phone": "+84-28-10010",
+    "country": "越南",
+    "lead_time_days": 30,
+    "status": "inactive"
+  }
+]
