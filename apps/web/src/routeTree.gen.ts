@@ -23,7 +23,6 @@ import { Route as AuthenticatedPurchaseOrdersIndexRouteImport } from './routes/_
 import { Route as AuthenticatedProductsIndexRouteImport } from './routes/_authenticated/products/index'
 import { Route as AuthenticatedInventoryIndexRouteImport } from './routes/_authenticated/inventory/index'
 import { Route as AuthenticatedInspectionIndexRouteImport } from './routes/_authenticated/inspection/index'
-import { Route as AuthenticatedAiSupplyIndexRouteImport } from './routes/_authenticated/ai-supply/index'
 import { Route as AuthenticatedErrorsErrorRouteImport } from './routes/_authenticated/errors/$error'
 
 const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
@@ -102,12 +101,6 @@ const AuthenticatedInspectionIndexRoute =
     path: '/inspection/',
     getParentRoute: () => AuthenticatedRouteRoute,
   } as any)
-const AuthenticatedAiSupplyIndexRoute =
-  AuthenticatedAiSupplyIndexRouteImport.update({
-    id: '/ai-supply/',
-    path: '/ai-supply/',
-    getParentRoute: () => AuthenticatedRouteRoute,
-  } as any)
 const AuthenticatedErrorsErrorRoute =
   AuthenticatedErrorsErrorRouteImport.update({
     id: '/errors/$error',
@@ -123,7 +116,6 @@ export interface FileRoutesByFullPath {
   '/500': typeof errors500Route
   '/503': typeof errors503Route
   '/errors/$error': typeof AuthenticatedErrorsErrorRoute
-  '/ai-supply/': typeof AuthenticatedAiSupplyIndexRoute
   '/inspection/': typeof AuthenticatedInspectionIndexRoute
   '/inventory/': typeof AuthenticatedInventoryIndexRoute
   '/products/': typeof AuthenticatedProductsIndexRoute
@@ -140,7 +132,6 @@ export interface FileRoutesByTo {
   '/503': typeof errors503Route
   '/': typeof AuthenticatedIndexRoute
   '/errors/$error': typeof AuthenticatedErrorsErrorRoute
-  '/ai-supply': typeof AuthenticatedAiSupplyIndexRoute
   '/inspection': typeof AuthenticatedInspectionIndexRoute
   '/inventory': typeof AuthenticatedInventoryIndexRoute
   '/products': typeof AuthenticatedProductsIndexRoute
@@ -159,7 +150,6 @@ export interface FileRoutesById {
   '/(errors)/503': typeof errors503Route
   '/_authenticated/': typeof AuthenticatedIndexRoute
   '/_authenticated/errors/$error': typeof AuthenticatedErrorsErrorRoute
-  '/_authenticated/ai-supply/': typeof AuthenticatedAiSupplyIndexRoute
   '/_authenticated/inspection/': typeof AuthenticatedInspectionIndexRoute
   '/_authenticated/inventory/': typeof AuthenticatedInventoryIndexRoute
   '/_authenticated/products/': typeof AuthenticatedProductsIndexRoute
@@ -178,7 +168,6 @@ export interface FileRouteTypes {
     | '/500'
     | '/503'
     | '/errors/$error'
-    | '/ai-supply/'
     | '/inspection/'
     | '/inventory/'
     | '/products/'
@@ -195,7 +184,6 @@ export interface FileRouteTypes {
     | '/503'
     | '/'
     | '/errors/$error'
-    | '/ai-supply'
     | '/inspection'
     | '/inventory'
     | '/products'
@@ -213,7 +201,6 @@ export interface FileRouteTypes {
     | '/(errors)/503'
     | '/_authenticated/'
     | '/_authenticated/errors/$error'
-    | '/_authenticated/ai-supply/'
     | '/_authenticated/inspection/'
     | '/_authenticated/inventory/'
     | '/_authenticated/products/'
@@ -332,13 +319,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedInspectionIndexRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
-    '/_authenticated/ai-supply/': {
-      id: '/_authenticated/ai-supply/'
-      path: '/ai-supply'
-      fullPath: '/ai-supply/'
-      preLoaderRoute: typeof AuthenticatedAiSupplyIndexRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
-    }
     '/_authenticated/errors/$error': {
       id: '/_authenticated/errors/$error'
       path: '/errors/$error'
@@ -352,7 +332,6 @@ declare module '@tanstack/react-router' {
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute
   AuthenticatedErrorsErrorRoute: typeof AuthenticatedErrorsErrorRoute
-  AuthenticatedAiSupplyIndexRoute: typeof AuthenticatedAiSupplyIndexRoute
   AuthenticatedInspectionIndexRoute: typeof AuthenticatedInspectionIndexRoute
   AuthenticatedInventoryIndexRoute: typeof AuthenticatedInventoryIndexRoute
   AuthenticatedProductsIndexRoute: typeof AuthenticatedProductsIndexRoute
@@ -365,7 +344,6 @@ interface AuthenticatedRouteRouteChildren {
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedIndexRoute: AuthenticatedIndexRoute,
   AuthenticatedErrorsErrorRoute: AuthenticatedErrorsErrorRoute,
-  AuthenticatedAiSupplyIndexRoute: AuthenticatedAiSupplyIndexRoute,
   AuthenticatedInspectionIndexRoute: AuthenticatedInspectionIndexRoute,
   AuthenticatedInventoryIndexRoute: AuthenticatedInventoryIndexRoute,
   AuthenticatedProductsIndexRoute: AuthenticatedProductsIndexRoute,

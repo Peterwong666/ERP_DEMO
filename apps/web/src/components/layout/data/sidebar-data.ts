@@ -5,7 +5,6 @@ import {
   Package,
   PackageCheck,
   ShoppingCart,
-  Sparkles,
   TrendingUp,
 } from 'lucide-react'
 import { type SidebarData } from '../types'
@@ -28,7 +27,6 @@ export const sidebarData: SidebarData = {
         { title: '质检管理', url: '/inspection', icon: ClipboardCheck },
         { title: '库存管理', url: '/inventory', icon: Boxes },
         { title: '补货管理', url: '/replenishment', icon: TrendingUp },
-        { title: 'AI 供应链', url: '/ai-supply', icon: Sparkles },
       ],
     },
   ],
