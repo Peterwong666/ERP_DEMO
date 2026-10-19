@@ -25,6 +25,10 @@
 
 全部业务指标由一份**确定性、幂等**的种子数据集生成，可通过核对脚本逐项精确验证——不是"我这儿看着没问题"，而是可复现、可校验的工程交付。
 
+30 秒看完「现场走单」业务闭环：看板总览 → 采购下单 → 收货质检 → 库存流水可追溯。
+
+![现场走单演示（30 秒）](docs/demo.gif)
+
 ## ✨ 核心特性
 
 - **完整业务闭环**：采购 → 收货 → 质检 → 库存，状态机驱动，流程清晰可追溯。
@@ -244,6 +248,10 @@ Makefile  docker-compose.yml  pyproject.toml
 A supply-chain ERP demo for **cross-border e-commerce small-goods sellers**. It covers the **full operational loop** from purchase order (PO), receiving, and quality inspection to stock put-away; every inventory movement is traceable to its source document. The system automatically detects low-stock SKUs and produces **three-tier** replenishment advice: Emergency / Suggested / Normal.
 
 All metrics are generated from a **deterministic, idempotent** seed dataset and verified item-by-item by a check script—delivering reproducible, verifiable engineering rather than "works on my machine."
+
+See the full "live order walkthrough" loop in 30 seconds: dashboard overview → PO ordering → receiving & inspection → traceable stock ledger.
+
+![Live order walkthrough (30s)](docs/demo.gif)
 
 ## ✨ Key Features
 
