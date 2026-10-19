@@ -8,6 +8,8 @@
 
 `Python 3.12` · `FastAPI` · `React 19` · `TypeScript` · `SQLAlchemy` · `SQLite` · `Docker`
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+
 **[中文](#-中文) ｜ [English](#-english)**
 
 </div>
