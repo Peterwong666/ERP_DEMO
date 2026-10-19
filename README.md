@@ -183,7 +183,6 @@ make check     # 8 项指标逐项断言，任一不符则退出码非 0
                       ┌─────────▼─────────┐
                       │   SQLite (14 表)   │
                       └───────────────────┘
-        apps/mcp-server（最小库存查询 tool · 下一里程碑）
 ```
 
 **设计约定**：routers 保持轻薄，业务行为收敛到 services；请求 / 响应 / 更新 schema 分离；库存过账统一走 `services/inventory_ledger.py`（原子条件 UPDATE + 余额重建 + 对账）。
@@ -212,7 +211,6 @@ apps/
   web/src/
     routes/            # TanStack 文件路由
     features/          # 7 个业务模块（+ errors）
-  mcp-server/          # MCP 最小 tool（下一里程碑）
 docs/
   screenshots/         # README 功能截图
   PRD.md               # 需求文档
@@ -232,7 +230,7 @@ Makefile  docker-compose.yml  pyproject.toml
 
 ## 🗺️ 下一里程碑（可扩展点）
 
-- **MCP Server**：暴露库存查询 tool，打通 AI Agent 与业务系统（骨架已建）。
+- **MCP Server**：暴露库存查询 tool，打通 AI Agent 与业务系统。
 - **LLM 分析层**：对补货建议 / 质检异常做自然语言归因（架构已预留，不影响确定性主干）。
 - 补货建议「一键生成 PO」、ML 销量预测替换均值模型。
 
@@ -406,7 +404,6 @@ Result: **6 low-stock SKUs, 8 replenishment suggestions (3 Emergency / 4 Suggest
                       ┌─────────▼─────────┐
                       │  SQLite (14 tables)│
                       └───────────────────┘
-        apps/mcp-server (minimal stock-query tool · next milestone)
 ```
 
 **Design conventions**: routers stay thin, business behavior lives in services; request/response/update schemas are separated; inventory posting goes through `services/inventory_ledger.py` (atomic conditional UPDATE + balance rebuild + reconciliation).
@@ -435,7 +432,6 @@ apps/
   web/src/
     routes/            # TanStack file-based routing
     features/          # 7 business modules (+ errors)
-  mcp-server/          # minimal MCP tool (next milestone)
 docs/
   screenshots/         # README feature screenshots
   PRD.md               # requirements doc
@@ -455,6 +451,6 @@ Makefile  docker-compose.yml  pyproject.toml
 
 ## 🗺️ Next Milestones
 
-- **MCP Server**: expose a stock-query tool to connect AI agents with the business system (skeleton in place).
+- **MCP Server**: expose a stock-query tool to connect AI agents with the business system.
 - **LLM analysis layer**: natural-language attribution for replenishment suggestions / QC anomalies (architecture reserved; deterministic core unaffected).
 - "One-click PO generation" from suggestions; ML sales forecasting replacing the moving-average model.
