@@ -8,6 +8,7 @@
 
 `Python 3.12` · `FastAPI` · `React 19` · `TypeScript` · `SQLAlchemy` · `SQLite` · `Docker`
 
+[![CI](https://github.com/Peterwong666/ERP_DEMO/actions/workflows/ci.yml/badge.svg)](https://github.com/Peterwong666/ERP_DEMO/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 **[中文](#-中文) ｜ [English](#-english)**
