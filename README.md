@@ -106,6 +106,8 @@ make dev                                              # 同时启动前后端
 make check     # 8 项指标逐项断言，任一不符则退出码非 0
 ```
 
+> 前端测试（`cd apps/web && pnpm test`）基于 Vitest 浏览器模式，首次运行前需先安装 Playwright 浏览器：`pnpm test:browser:install`。
+
 ## 📊 8 项关键指标（验收真值表）
 
 `make check` 与看板页面展示的数字完全一致：
@@ -325,6 +327,8 @@ make dev                                              # start frontend and backe
 ```bash
 make check     # asserts 8 metrics one by one; non-zero exit on any mismatch
 ```
+
+> Frontend tests (`cd apps/web && pnpm test`) run in Vitest browser mode; install the Playwright browser once before the first run: `pnpm test:browser:install`.
 
 ## 📊 8 Key Metrics (Acceptance Truth Table)
 
