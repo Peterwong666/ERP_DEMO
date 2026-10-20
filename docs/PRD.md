@@ -1,7 +1,7 @@
 # PRD — 跨境电商供应链 ERP_DEMO 产品需求文档
 
 > 版本：v1.1（已冻结）　日期：2026-10-08
-> 配套文档：[design-tokens.md](./design-tokens.md)（视觉规格）、[../todolist.md](../todolist.md)（任务书）
+> 配套文档：[design-tokens.md](./design-tokens.md)（视觉规格）、[./process/todolist.md](./process/todolist.md)（任务书）
 > Figma：`ERP_DEMO_V2`，fileKey `ipfKD6HngH1Gsj3xwuDMqB`
 > 状态：**已冻结（2026-10-08 用户评审通过）**　变更须记入 `项目进度.md` 决策记录
 > v1.1 变更：阈值/分档/口径等参数改为「系统设置」，用户可在界面自行配置
