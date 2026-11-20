@@ -22,6 +22,10 @@
 
 全部业务指标由一份**确定性、幂等**的种子数据集生成，可通过核对脚本逐项精确验证——不是"我这儿看着没问题"，而是可复现、可校验的工程交付。
 
+**第一次使用** · [在线演示](#-在线-demo) · [本地 Docker 演示](#-快速开始)
+
+在在线演示查看库存对账和补货建议。要亲自录入一笔采购、收货和质检，先启动本地样例，再按[业务闭环](#-业务闭环核心演示路径)操作。
+
 30 秒看完「现场走单」业务闭环：看板总览 → 采购下单 → 收货质检 → 库存流水可追溯。
 
 ![现场走单演示（30 秒）](docs/demo.gif)
@@ -97,8 +101,13 @@ make up
 ### 方式 B：Docker Compose
 
 ```bash
-docker compose up --build
+docker compose up -d --build --wait
+curl -fsS http://localhost:8080/api/inventory/reconciliation
 ```
+
+
+
+打开 <http://localhost:8080>。干净演示库的对账响应为 `[]`，表示库存余额与流水一致。可用 `ERP_WEB_PORT` 和 `ERP_API_PORT` 调整本机端口。浏览器通过 Web 容器访问 API。
 
 ### 手动分步
 
@@ -328,8 +337,11 @@ Automatically: installs dependencies (uv + pnpm) → seeds an empty database →
 ### Option B: Docker Compose
 
 ```bash
-docker compose up --build
+docker compose up -d --build --wait
+curl -fsS http://localhost:8080/api/inventory/reconciliation
 ```
+
+
 
 ### Manual steps
 
