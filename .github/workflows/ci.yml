@@ -20,7 +20,8 @@ jobs:
         run: make check
 
   web:
-    runs-on: ubuntu-latest
+    # Playwright 1.59 supports Ubuntu 24.04 for Chromium.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
