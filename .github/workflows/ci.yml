@@ -41,3 +41,24 @@ jobs:
         run: pnpm test
       - working-directory: apps/web
         run: pnpm build
+
+  docker-first-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start a freshly seeded demo
+        run: docker compose up -d --build --wait --wait-timeout 120
+      - name: Verify the browser origin and seeded business data
+        run: |
+          curl -fsS http://localhost:8080/ >/dev/null
+          curl -fsS http://localhost:8080/api/dashboard |
+            jq -e '.open_po_count == 4 and .available_sku_count == 50 and .suggestion_count == 8'
+          curl -fsS http://localhost:8080/api/inventory/reconciliation |
+            jq -e '. == []'
+      - name: Show startup diagnostics
+        if: failure()
+        run: docker compose logs --tail 60
+      - name: Stop demo
+        if: always()
+        run: docker compose down
